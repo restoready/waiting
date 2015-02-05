@@ -51,6 +51,20 @@
               {% endif %}
             </div>
           </div>
+          <div class="address">
+            <p itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
+              {% if restaurant.street_address? %}
+                <span itemprop="streetAddress">{{ restaurant.street_address }}</span>
+                <br>
+              {% endif %}
+              {% if restaurant.zip_code? %}
+                <span itemprop="postalCode">{{ restaurant.zip_code }}</span>
+              {% endif %}
+              {% if restaurant.city? %}
+                <span itemprop="addressLocality">{{ restaurant.city }}</span>
+              {% endif %}
+            </p>
+          </div>
           {% if restaurant.phone? %}
             <div class="phone-number">
               <a class="phone-number__link" href="tel:{{ restaurant.phone_uri }}">
@@ -61,9 +75,6 @@
 
         </div>
       </header>
-      <nav id="nav" class="main-nav" role="navigation">
-        {% include 'nav' %}
-      </nav>
       <main class="main-content" role="main">
         {{ content_for_layout }}
       </main>
@@ -71,16 +82,5 @@
         {% include 'footer' %}
       </footer>
     </section>
-
-    {{ 'jquery-2.1.1.min.js' | javascript_tag }}
-    {{ 'doubletaptogo.min.js' | javascript_tag }}
-    <script type="text/javascript">
-      $( function() {
-        $( '.has-sub-nav' ).doubleTapToGo();
-        $('.main-nav__toggle').click(function(){
-          $('.local-choice-wrapper').toggle();
-        });
-      });
-    </script>
   </body>
 </html>

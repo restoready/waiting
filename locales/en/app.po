@@ -151,3 +151,12 @@ msgstr "Your phone number :"
 
 msgid "Votre message :"
 msgstr "Your message :"
+
+msgid "Inscrivez vous à notre newsletter&nbsp;:"
+msgstr "Subscribe to our newsletter&nbsp;:"
+
+msgid "Retrouvez bientôt le site Internet de votre restaurant."
+msgstr "Your restaurant's website will be online soon."
+
+msgid "Un service RestoReady"
+msgstr "A RestoReady service"

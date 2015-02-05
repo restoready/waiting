@@ -1,16 +1,11 @@
+<hr class="separator">
 <div class="wrapper">
-  <div class="back-to-top">
-    <a class="back-to-top__link" href="#top">
-      <span class="back-to-top__label">{{ "Haut de la page" | t }}</span>
-    </a>
-  </div>
-
   {% if theme_settings.footer_display_newsletter %}
     <div class="footer__subscribe">
       {% newsletter_subscribe_form %}
         <fieldset class="field-group">
           <div class="input">
-            <label class="subscribe__label" for="subscriberEmail">{{ "Entrez votre email pour recevoir notre newsletter&nbsp;:" | t }}</label>
+            <label class="subscribe__label" for="subscriberEmail">{{ "Inscrivez vous à notre newsletter&nbsp;:" | t }}</label>
             <input id="subscriberEmail" name="subscriber[email]" type="email" required>
           </div>
           <div class="submit">
