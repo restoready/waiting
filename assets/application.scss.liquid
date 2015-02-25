@@ -668,8 +668,6 @@ a {
     width: 65px;
     height: 30px;
     margin: 0 auto;
-    background: transparent;
-    -webkit-appearance: none;
     font-size: 16px;
     font-weight: bold;
     color: $body-color;
@@ -679,6 +677,10 @@ a {
     outline: none;
     position: relative;
     z-index: 1;
+    background: transparent;
+    -webkit-appearance: none;
+    -moz-appearance: window;
+    appearance: none;
   }
   .local-choice__icon {
     position: absolute;
